@@ -289,6 +289,35 @@ document.getElementById("admForm").addEventListener("submit", (e) => {
     msg.style.color = "green";
 });
 </script>
+<br><br>
+<!-- PASSWORD PROTECTED GOOGLE FORM LINK -->
+<div style="text-align:center; margin:20px 0;">
+  <input type="password" id="formPass" placeholder="Enter Password"
+  style="padding:10px; font-size:16px; border:2px solid #004aa8; border-radius:6px;">
+
+  <br><br>
+
+  <button onclick="openForm()"
+  style="padding:10px 25px; font-size:18px; background:#004aa8; color:white; border:none; border-radius:8px;">
+    Open Student Form
+  </button>
+
+  <p id="passMsg" style="margin-top:10px; font-size:16px;"></p>
+</div>
+
+<script>
+function openForm() {
+  var pass = document.getElementById("formPass").value;
+
+  if (pass === "RK/TUTION@2025") {
+    window.location.href = "https://forms.gle/sn2dYjGM7UDmV4bX7";
+  } else {
+    document.getElementById("passMsg").innerHTML = "❌ Wrong Password!";
+    document.getElementById("passMsg").style.color = "red";
+  }
+}
+</script>
+
 
 
 
